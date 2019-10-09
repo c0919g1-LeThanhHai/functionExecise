@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="searchStar(prompt('Nhập vào 1 cái tên'))">
+<script>
+    let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let star2 = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Usar Major","Leo"];
+    function searchStar(name) {
+        let result = "";
+        for(let item  in star) {
+            if(star[item] == name) {
+                result = "Chòm sao của ngôi sao " + star[item] + " là " + star2[item];
+                break;
+            } else {
+                result = "Không tìm thấy ai có tên như thế cả";
+            }
+        }
+        document.write(result);
+    }
+</script>
+</body>
+</html>
